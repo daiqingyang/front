@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>列表</title>
+<link rel="stylesheet" type="text/css" href="style/base.css">
+<link rel="stylesheet" type="text/css" href="style/common.css">
+<link rel="stylesheet" type="text/css" href="style/list.css">
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+window.onload=window.onresize=function(){
+    var clientH=document.documentElement.clientHeight;
+    var oSec=document.getElementById('sec');
+    var oSideBar=document.getElementById('sideBar');
+    var oHeader=document.getElementById('header');
+    var hH=parseInt(oHeader.offsetHeight);
+    console.log(hH);
+    var h=parseInt(oSec.scrollHeight);
+    if(h<clientH)
+    {
+        oSideBar.style.height=oSec.style.height=clientH-hH+'px';
+        return;
+    }
+    oSideBar.style.height=h+'px';
+}
+</script>
+</head>
+<body>
+<div class="wrap bg-gray">
+	<nav class="header fs16" id="header">
+		<a href="" class="active">首页</a>
+		<a href="">jenkins</a>
+		<a href="">zenoss</a>
+		<a href="">gitlab</a>
+		<a href="">daiqingyang</a>
+		<a href="http://10.18.6.100/logout/">注销</a>
+	</nav>
+	<div class="pr">
+		<div class="list-sideBar" id="sideBar">
+			<nav class="list-ul">
+    			<li><span><em></em></span>常用功能操作</li>
+                <li class="active"><span></span><a href="">主机列表</a></li>
+                <li><span></span><a href="">虚机列表</a></li>
+                <li><span></span><a href="">批量导入</a></li>
+    		</nav>
+		</div>
+		<section class="list-con" id="sec">
+			 <h2 class="title">网站项目管理</h2>
+			 <header>
+			 	关键字:<input type="text"><input type="button" value="查询">
+			 </header>
+             <div class="nav-tag">
+                 <ul class="nav-tag-list">
+                    <span class="select">公益</span>
+                    <span>科技</span>
+                    <span>出版</span>
+                    <span>娱乐</span>
+                    <span>收藏</span>
+                    <span>设计</span>
+                    <span>动漫游戏</span>
+                    <span>农业</span>
+                    <span>其他</span>
+                 </ul>
+                 <div class="nav-tag-btn">
+                     <a href="" class="add">添加</a>
+                 </div>
+             </div>
+			 <ul class="table-list">
+			 	<li>
+    		 		<span>归属地</span>
+    		 		<span>序列号</span>
+    		 		<span>主机名</span>
+    		 		<span>IP地址</span>
+    		 		<span>cpu</span>
+    		 		<span>内存</span>
+    		 		<span>硬盘</span>
+    		 		<span>归属人</span>
+    		 		<span class="last">备注</span>
+    		 	</li> 
+			 	<li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                   <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                   <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+                <li>
+                    <span>tj</span>
+                    <span>6CU421D4QD</span>
+                    <span>centos</span>
+                    <span>172.31.3.70 </span>
+                    <span>16</span>
+                    <span>未知</span>
+                    <span>未知</span>
+                    <span>李旭</span>
+                    <span class="last"><a href="">查看</a><a href="">删除</a></span>
+                </li>
+			 </ul>
+			 <div class="table-footer clearfix">
+			 	<div class="sum fl">共<span>265</span>条数据,当前是第<span>1</span>页</div>
+			 	<!-- <div class="page fr">
+			 		<a href="">首页</a>
+			 		<span class="active">1</span>
+			 		<span>2</span>
+			 		<span>3</span>
+			 		<span>4</span>
+			 		<span>5</span>
+			 		<span>6</span>
+			 		<span>7</span>
+			 		<span>8</span>
+			 		<span>9</span>
+			 		<a href="">下一页</a>
+			 		<a href="">尾页</a>
+			 	</div> -->
+			 </div>
+			<div class="browser-support">↓↓↓↓请使用高版本浏览器 [ IE支持IE8以上 ]</div>
+		</section>
+	</div>
+</div>
+</body>
+</html>

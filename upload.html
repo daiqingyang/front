@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>上传</title>
+<link rel="stylesheet" type="text/css" href="style/base.css">
+<link rel="stylesheet" type="text/css" href="style/common.css">
+<link rel="stylesheet" type="text/css" href="style/upload.css">
+<script type="text/javascript">
+window.onload=window.onresize=function(){
+    var clientH=document.documentElement.clientHeight;
+    var oSec=document.getElementById('sec');
+    var oSideBar=document.getElementById('sideBar');
+    var oHeader=document.getElementById('header');
+    var hH=parseInt(oHeader.offsetHeight);
+    console.log(hH);
+    var h=parseInt(oSec.scrollHeight);
+    if(h<clientH)
+    {
+        oSideBar.style.height=oSec.style.height=clientH-hH+'px';
+        return;
+    }
+    oSideBar.style.height=h+'px';
+}
+</script>
+</head>
+<body>
+<div class="wrap bg-gray">
+	<nav class="header fs16" id="header">
+		<a href="" class="active">首页</a>
+		<a href="">jenkins</a>
+		<a href="">zenoss</a>
+		<a href="">gitlab</a>
+	</nav>
+	<div class="pr">
+		<div class="list-sideBar" id="sideBar">
+			<nav class="list-ul">
+				<li><span><em></em></span>常用功能操作</li>
+				<li><span></span><a href="">网站项目管理</a></li>
+				<li><span></span><a href="">档案列表</a></li>
+				<li><span></span><a href="">等待审核的文档</a></li>
+				<li><span></span><a href="">我发布的文档</a></li>
+				<li><span></span><a href="">内容管理</a></li>
+				<li class="active"><span></span><a href="">上传</a></li>
+			</nav>
+		</div>
+		<section class="list-con" id="sec">
+			 <h2 class="title">上传文件</h2>
+			 <div class="upload-area fs14">
+			 	<span class="fl">请选择要上传的文件</span>
+				<!-- <div class="ipt-file fl">
+					<input type="file" value="上传文件" id="upFile">
+					<a href="" id="upload">上传文件</a>
+				</div> -->
+				<input type="file">
+				<input type="button" value="上传">
+				<span class="fl gray">仅支持xls格式</span>
+			 </div>
+		</section>
+	</div>
+</div>
+</body>
+</html>

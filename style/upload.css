@@ -1,0 +1,6 @@
+@charset "utf-8";
+.upload-area{margin:100px 0 0 100px;}
+.upload-area span{line-height: 45px;}
+.ipt-file{position:relative;height: 43px;width: 136px;border:1px solid #e4e4e4;line-height: 43px;text-align:center;background:#fff;margin:0 10px;}
+.ipt-file input{position: absolute;top:0;left:0;opacity:0;width: 78px;height: 28px;cursor:pointer;;}
+.ipt-file a{color:#55acef;display:block;width: 100%;height: 100%;}

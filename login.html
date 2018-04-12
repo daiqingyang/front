@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>登陆</title>
+<link rel="stylesheet" type="text/css" href="style/base.css">
+<link rel="stylesheet" type="text/css" href="style/common.css">
+<link rel="stylesheet" type="text/css" href="style/login.css">
+<script type="text/javascript">
+window.onload=function(){
+	var oPwd=document.getElementById('password');
+	var oLogin=document.getElementById('owl-login');
+	oPwd.onfocus=function()
+	{
+		oLogin.className='password';
+	}
+	oPwd.onblur=function()
+	{
+		oLogin.className='';
+	}
+}
+</script>
+</head>
+<body>
+<div class="wrap bg-gray">
+	<div class="login clearfix">
+		<form action="" class="login-form">
+			<div id="owl-login">
+				<div class="hand"></div>
+				<div class="hand hand-r"></div>
+				<div class="arms">
+					<div class="arm"></div>
+					<div class="arm arm-r"></div>
+				</div>
+			</div>
+			<div class="pad">
+				<div class="control-group">
+					<div class="controls">
+						<label for="email" class="control-label fa fa-envelope"></label>
+						<em class="email-icon"></em>
+						<input id="email" type="email" name="email" placeholder="用户名" tabindex="1" autofocus="autofocus" class="form-control input-medium">
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<label for="password" class="control-label fa fa-asterisk"></label>
+						<em class="password-icon"></em>
+						<input id="password" type="password" name="password" placeholder="Password" tabindex="2" class="form-control input-medium">
+					</div>
+				</div>
+			</div>
+			<div class="form-actions">
+				<a href="/forgot/" tabindex="5" class="btn pull-left btn-link text-muted">Forgot password?</a>
+				<a href="/signup" tabindex="6" class="btn btn-link text-muted">Sign Up</a>
+				<button type="submit" tabindex="4" class="btn btn-primary">Login</button>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

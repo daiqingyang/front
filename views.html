@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>查看</title>
+<link rel="stylesheet" type="text/css" href="style/base.css">
+<link rel="stylesheet" type="text/css" href="style/common.css">
+<link rel="stylesheet" type="text/css" href="style/list.css">
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+window.onload=window.onresize=function(){
+    var clientH=document.documentElement.clientHeight;
+    var oSec=document.getElementById('sec');
+    var oSideBar=document.getElementById('sideBar');
+    var oHeader=document.getElementById('header');
+    var hH=parseInt(oHeader.offsetHeight);
+    console.log(hH);
+    var h=parseInt(oSec.scrollHeight);
+    if(h<clientH)
+    {
+        oSideBar.style.height=oSec.style.height=clientH-hH+'px';
+        return;
+    }
+    oSideBar.style.height=h+'px';
+}
+</script>
+</head>
+<body>
+<div class="wrap bg-gray">
+	<nav class="header fs16" id="header">
+		<a href="" class="active">首页</a>
+		<a href="">jenkins</a>
+		<a href="">zenoss</a>
+		<a href="">gitlab</a>
+		<a href="">daiqingyang</a>
+		<a href="http://10.18.6.100/logout/">注销</a>
+	</nav>
+	<div class="pr">
+		<div class="list-sideBar" id="sideBar">
+			<nav class="list-ul">
+    			<li><span><em></em></span>常用功能操作</li>
+                <li class="active"><span></span><a href="">主机列表</a></li>
+                <li><span></span><a href="">虚机列表</a></li>
+                <li><span></span><a href="">批量导入</a></li>
+    		</nav>
+		</div>
+		<section class="list-con" id="sec">
+             <h2 class="title">主机详情</h2>
+             <form action="" class="host-details">
+                 <div class="host-details-list">
+                     <label for="">地址：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">序列号：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">主机名：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">ip：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">远程卡ip地址：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">远程卡账号：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">远程卡密码：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">cpu：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">内存：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">硬盘：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">归属人：</label>
+                     <p>
+                        <input type="text">
+                     </p>
+                 </div>
+                 <div class="host-details-list" style="height:auto">
+                     <label for="">归属人：</label>
+                     <p class="fs16">
+                        <em><input type="checkbox" name="department" id="firstp2p" value="firstp2p"><span>firstp2p</span></em>
+                        <em><input type="checkbox" name="department" id="firstp2p" value="firstp2p"><span>firstp2p</span></em>
+                        <em><input type="checkbox" name="department" id="firstp2p" value="firstp2p"><span>firstp2p</span></em>
+                        <em><input type="checkbox" name="department" id="firstp2p" value="firstp2p"><span>firstp2p</span></em>
+                        <em><input type="checkbox" name="department" id="firstp2p" value="firstp2p"><span>firstp2p</span></em>
+                        <em><input type="checkbox" name="department" id="firstp2p" value="firstp2p"><span>firstp2p</span></em>
+                     </p>
+                 </div>
+                 <div class="host-details-list" style="height:auto">
+                     <label for="">备注：</label>
+                     <p>
+                        <textarea>db01</textarea>
+                     </p>
+                 </div>
+                 <div class="host-details-list">
+                     <label for="">最后修改时间：</label>
+                     <p>
+                        <input type="text" readonly>
+                     </p>
+                 </div>
+                  <div class="op view-op fb tc">
+                    <a href="" class="add">确定</a>
+                    <a href="" class="del">取消</a>
+                 </div>
+             </form>
+			<div class="browser-support">↓↓↓↓请使用高版本浏览器 [ IE支持IE8以上 ]</div>
+		</section>
+	</div>
+</div>
+</body>
+</html>

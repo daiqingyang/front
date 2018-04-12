@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>用户权限操作</title>
+<link rel="stylesheet" type="text/css" href="style/base.css">
+<link rel="stylesheet" type="text/css" href="style/common.css">
+<link rel="stylesheet" type="text/css" href="style/list.css">
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+window.onload=window.onresize=function(){
+    var clientH=document.documentElement.clientHeight;
+    var oSec=document.getElementById('sec');
+    var oSideBar=document.getElementById('sideBar');
+    var oHeader=document.getElementById('header');
+    var hH=parseInt(oHeader.offsetHeight);
+    console.log(hH);
+    var h=parseInt(oSec.scrollHeight);
+    if(h<clientH)
+    {
+        oSideBar.style.height=oSec.style.height=clientH-hH+'px';
+        return;
+    }
+    oSideBar.style.height=h+'px';
+}
+</script>
+</head>
+<body>
+<div class="wrap bg-gray">
+	<nav class="header fs16" id="header">
+		<a href="" class="active">首页</a>
+		<a href="">jenkins</a>
+		<a href="">zenoss</a>
+		<a href="">gitlab</a>
+		<a href="">daiqingyang</a>
+		<a href="http://10.18.6.100/logout/">注销</a>
+	</nav>
+	<div class="pr">
+		<div class="list-sideBar" id="sideBar">
+			<nav class="list-ul">
+    			<li><span><em></em></span>常用功能操作</li>
+                <li class="active"><span></span><a href="">主机列表</a></li>
+                <li><span></span><a href="">虚机列表</a></li>
+                <li><span></span><a href="">批量导入</a></li>
+    		</nav>
+		</div>
+		<section class="list-con" id="sec">
+			 <h2 class="title">用户权限操作</h2>
+             <form class="add-user">
+                 <div class="add-list clearfix">
+                     <label>用户名：</label>
+                     <div class="add-right">
+                        <input type="text">
+                    </div>
+                 </div>
+                 <div class="add-list clearfix">
+                     <label>添加到组：</label>
+                     <div class="add-right">
+                        <p class="clearfix">
+                            <input type="radio" name="pos" id="sys">
+                            <label for="sys">sys</label>   
+                        </p>
+                        <p class="clearfix">
+                            <input type="radio" name="pos" id="idc">
+                            <label for="idc">idc</label>
+                        </p>
+                        <p class="clearfix">
+                            <input type="radio" name="pos" id="net">
+                            <label for="net">net</label>
+                        </p>
+                        <p class="clearfix">
+                            <input type="radio" name="pos" id="security">
+                            <label for="security">security</label>
+                        </p>
+                     </div>
+                 </div>
+                 <div class="op">
+                    <a href="" class="add">确定</a>
+                    <a href="" class="del">取消</a>
+                 </div>
+             </form>
+			<div class="browser-support">↓↓↓↓请使用高版本浏览器 [ IE支持IE8以上 ]</div>
+		</section>
+	</div>
+</div>
+</body>
+</html>
