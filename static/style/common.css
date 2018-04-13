@@ -36,3 +36,20 @@
 .add:hover{background-color:#47a447}
 .del{background-color:#5bc0de;}
 .del:hover{background-color:#39b3d7;}
+.login-form{
+	position:relative;
+}
+.common-pop{
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:300px;
+	padding:20px;
+	transform:translate(-50%,-50%);
+	background:#fff;
+	border-radius:5px;
+	font-size:18px;
+	box-shadow: 0 0 5px #000;
+	text-align:center;
+	display:none;
+}
