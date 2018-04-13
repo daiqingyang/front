@@ -3,46 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>登陆</title>
+<script type="text/javascript" src="static/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="static/js/login.js"></script>
 <link rel="stylesheet" type="text/css" href="static/style/base.css">
 <link rel="stylesheet" type="text/css" href="static/style/common.css">
 <link rel="stylesheet" type="text/css" href="static/style/login.css">
-<script type="text/javascript">
-window.onload=function(){
-	var oPwd=document.getElementById('password');
-	var oLogin=document.getElementById('owl-login');
-	var oForgot = document.getElementById('forgot');
-	var oSign = document.getElementById('sign');
-	var oShowError = document.getElementById('showError');
-	oPwd.onfocus=function()
-	{
-		oLogin.className='password';
-	}
-	oPwd.onblur=function()
-	{
-		oLogin.className='';
-	}
-	oForgot.onclick = function(){
-		var msg = '请联系it管理员重置密码';
-		showError(msg);
-	}
-	oSign.onclick = function(){
-		var msg = '请联系it管理员申请域账号';
-		showError(msg);
-	}
-	function showError(msg){
-		oShowError.innerHTML = msg;
-		oShowError.style.display = 'block';
-		setTimeout(function() {
-            oShowError.style.display = 'none';
-        }, 1500);
-	}
-}
-</script>
 </head>
 <body>
 <div class="wrap bg-gray">
 	<div class="login clearfix">
-		<form action="" class="login-form" method="get">
+		<div class="login-form">
 			<div id="owl-login">
 				<div class="hand"></div>
 				<div class="hand hand-r"></div>
@@ -52,12 +22,12 @@ window.onload=function(){
 				</div>
 			</div>
 			<div class="pad">
-				<p class="error">您输入的密码和用户名不匹配</p>
+				<p class="error"></p>
 				<div class="control-group">
 					<div class="controls">
 						<label for="email" class="control-label fa fa-envelope"></label>
 						<em class="email-icon"></em>
-						<input id="text" type="text" name="email" placeholder="域账号" tabindex="1" autofocus="autofocus" class="form-control input-medium">
+						<input id="userName" type="text" name="email" placeholder="域账号" tabindex="1" autofocus="autofocus" class="form-control input-medium">
 					</div>
 				</div>
 				<div class="control-group">
@@ -71,12 +41,11 @@ window.onload=function(){
 			<div class="form-actions">
 				<a href="javascript:" tabindex="5" class="btn pull-left btn-link text-muted" id="forgot">Forgot password?</a>
 				<a href="javascript:" tabindex="6" class="btn btn-link text-muted" id="sign">Sign Up</a>
-				<button type="submit" tabindex="4" class="btn btn-primary">Login</button>
+				<button type="submit" tabindex="4" class="btn btn-primary" id="login">Login</button>
 			</div>
 			<div class="common-pop" id="showError">
-				
 			</div>
-		</form>
+		</div>
 	</div>
 </div>
 </body>
