@@ -48,6 +48,7 @@ $(function(){
 			data:{'userName':userName,'password':password},
 			timeout:1500,
 			beforeSend:function(){
+				oLoading.hide();
 				oLoading.appendTo('.login-form');
 			},
 			success:function(data){
