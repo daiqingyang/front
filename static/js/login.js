@@ -38,7 +38,7 @@ $(function(){
 	$('#login').click(function(){
 		var userName = $('#userName').val();
 		var password = $('#password').val();
-		if(!userName && !password){
+		if(!userName || !password){
 			$('.error').text('请输入用户名及密码');
 			return;
 		}
@@ -51,8 +51,9 @@ $(function(){
 				oLoading.hide();
 				oLoading.appendTo('.login-form');
 			},
-			success:function(s){
-				if(s == 'failed'){//请求不成功
+			success:function(data){
+				console.log(data,'data')
+				if(data.s == 'failed'){//请求不成功
 					$('.error').html('您输入的密码和用户名不匹配');
 				}else{
 					window.location.href = '/';
