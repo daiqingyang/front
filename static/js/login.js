@@ -45,14 +45,13 @@ $(function(){
 		$.ajax({
 			type:'post',
 			url:host,
-			data:'userName='+userName+'&password='+password,
-			timeout:1500,
+			data:'username='+userName+'&password='+password,
+			timeout:5000,
 			beforeSend:function(){
-				oLoading.hide();
 				oLoading.appendTo('.login-form');
 			},
 			success:function(data){
-				console.log(data,'data')
+				oLoading.hide();
 				if(data.s == 'failed'){//请求不成功
 					$('.error').html('您输入的密码和用户名不匹配');
 				}else{
