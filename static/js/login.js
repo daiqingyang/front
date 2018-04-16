@@ -43,19 +43,19 @@ $(function(){
 			return;
 		}
 		$.ajax({
-			type:'get',
-			url:'renrenzan.cn/dologin',
-			data:{'userName':userName,'password':password},
+			type:'post',
+			url:host,
+			data:'userName='+userName+'&password='+password,
 			timeout:1500,
 			beforeSend:function(){
 				oLoading.hide();
 				oLoading.appendTo('.login-form');
 			},
-			success:function(data){
-				if(data.code == 'falid'){//请求不成功
+			success:function(s){
+				if(s == 'failed'){//请求不成功
 					$('.error').html('您输入的密码和用户名不匹配');
 				}else{
-					window.location.href = 'index.html';
+					window.location.href = '/';
 				}
 			}
 		})
