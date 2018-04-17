@@ -55,6 +55,8 @@ $(function(){
 				oLoading.hide();
 				if(data.s == 'failed'){//请求不成功
 					$('.error').html('您输入的密码和用户名不匹配');
+				}else if(data.s == 'failed_often'){
+					$('.error').html('密码重试过于频繁，请5分钟后再试');
 				}else{
 					window.location.href = '/';
 				}
