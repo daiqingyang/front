@@ -1,4 +1,7 @@
 $(function(){
+	var url = 'http://172.31.33.75:7777/login?next=/test';//window.location.href
+					var toUrl = url.split('=');
+					console.log(typeof toUrl[1]);
 	var oPwd=document.getElementById('password');
 	var oLogin=document.getElementById('owl-login');
 	var oForgot = document.getElementById('forgot');
@@ -58,7 +61,9 @@ $(function(){
 				}else if(data.s == 'failed_often'){
 					$('.error').html('密码重试过于频繁，请5分钟后再试');
 				}else{
-					window.location.href = '/';
+					var url = window.location.href;
+					var toUrl = url.split('=');
+					window.location.href = toUrl[1];
 				}
 			}
 		})
