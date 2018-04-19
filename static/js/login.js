@@ -63,7 +63,11 @@ $(function(){
 				}else{
 					var url = window.location.href;
 					var toUrl = url.split('=');
-					window.location.href = toUrl[1];
+                    if(typeof(toUrl[1])=="undefined"){
+                        window.location.href ="/";
+                    }else{
+                        window.location.href = toUrl[1];
+                    }
 				}
 			}
 		})
