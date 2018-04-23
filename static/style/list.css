@@ -6,7 +6,7 @@
 .table-list li:nth-child(even){background-color:#fff;}
 .table-list li:first-child{font-weight:bold;}
 .table-list li:last-child{border:none;}
-.table-list li span{float:left;width:11%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-right:1px solid #ccc;text-indent:10px;}
+.table-list li span{float:left;width:12.5%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-right:1px solid #ccc;text-indent:10px;}
 .table-list li span:first-child{padding-left: 12px}
 .table-list li span.last{border-right:none;position:relative;}
 .table-list li span a{color:#417eb7;margin-right: 10px;}
