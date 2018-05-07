@@ -1,5 +1,6 @@
 @charset "utf-8";
 .commandBox{
+	font-size:14px;
 	background:#fff;
 	border:1px solid #D4D4D4;
 	margin-bottom: 10px;
@@ -22,7 +23,7 @@
 	width:564px;
 	box-sizing:border-box;
 }
-.formItem .inp input,.formItem .inp textarea{
+.formItem .inp input,.formItem .inp .result{
 	width:100%;
 	background:#fafafa;
 	margin-left:0;
@@ -31,8 +32,10 @@
 	height:35px;
 	line-height:35px;
 }
-.formItem .inp textarea{
-	height:120px;
+.formItem .inp .result{
+	word-wrap: break-word;
+	line-height:24px;
+	margin-right:20px;
 }
 .formItem .submit{
 	display:inline-block;
@@ -44,4 +47,7 @@
 	width:45px;
 	height:28px;
 	background:#2e86cb;
+}
+#showResult{
+	display:none;
 }
