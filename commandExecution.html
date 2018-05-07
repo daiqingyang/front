@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>远程执行命令</title>
+<script type="text/javascript" src="static/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="static/js/list.js"></script>
+<link rel="stylesheet" type="text/css" href="static/style/base.css">
+<link rel="stylesheet" type="text/css" href="static/style/common.css">
+<link rel="stylesheet" type="text/css" href="static/style/command.css">
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+window.onload=window.onresize=function(){
+    var clientH=document.documentElement.clientHeight;
+    var oSec=document.getElementById('sec');
+    var oSideBar=document.getElementById('sideBar');
+    var oHeader=document.getElementById('header');
+    var hH=parseInt(oHeader.offsetHeight);
+    console.log(hH);
+    var h=parseInt(oSec.scrollHeight);
+    if(h<clientH)
+    {
+        oSideBar.style.height=oSec.style.height=clientH-hH+'px';
+        return;
+    }
+    oSideBar.style.height=h+'px';
+}
+</script>
+</head>
+<body>
+<div class="wrap bg-gray">
+	<nav class="header fs16 clearfix" id="header">
+        <div class="headerRight">
+            <div class="userName">
+                <span>userName</span>
+                <span>注销</span>
+            </div>
+        </div>
+	</nav>
+	<div class="pr">
+		<div class="list-sideBar" id="sideBar">
+			<nav class="list-ul">
+                <li><span></span><a href="hostList.html">主机管理</a></li>
+                <li><span></span><a href="list.html">用户管理</a></li>
+                <li class="active"><span></span><a href="commandExecution.html">远程执行命令</a></li>
+    		</nav>
+		</div>
+		<section class="list-con" id="sec">
+			 <h2 class="title">命令执行</h2>
+             <div class="commandBox">
+                <div class="formItem">
+                    <label for="">目标主机</label>
+                    <div class="inp">
+                       <input type="text">
+                    </div>
+                </div>
+                <div class="formItem">
+                    <label for="">远程命令</label>
+                    <div class="inp">
+                       <input type="text">
+                    </div>
+                </div>
+                <div class="formItem">
+                    <a class="submit" href="javascript:">提交</a>
+                </div>
+                 <div class="formItem">
+                    <label for="">返回结果</label>
+                    <div class="inp">
+                       <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+			<div class="browser-support">↓↓↓↓请使用高版本浏览器 [ IE支持IE8以上 ]</div>
+		</section>
+	</div>
+</div>
+</body>
+</html>

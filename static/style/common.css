@@ -29,7 +29,7 @@
 .list-ul li span{border-top:2px dotted #F0F0F0;border-right:2px dotted #F0F0F0;width: 8px;height: 8px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);display:inline-block;margin-right: 10px;vertical-align:middle;}
 .list-ul li:hover,.list-ul li.active{background:#2e86cb;}
 .list-con{margin-left:290px;}
-.list-con .title{height: 40px;line-height: 40px;border-bottom:1px solid #D6D6D6;box-shadow:0 1px #fff;color:#000;font-size: 16px;font-weight:bold;}
+.list-con .title{height: 40px;line-height: 40px;font-size: 16px;font-weight:bold;}
 .list-con header,.add-user{padding:10px;font-weight:bold;}
 .list-con input{height: 24px;line-height: 24px;margin-left: 10px;}
 .list-con input[type="text"]{border-top:1px solid #BEBEBE;border-left:1px solid #BEBEBE;border-right:1px solid #E1E1E1;border-bottom:1px solid #E1E1E1;background:#fff;}
@@ -67,3 +67,4 @@
 	text-align:center;
 	display:none;
 }
+.browser-support{padding-top:20px;font-weight:bold;font-size:14px;text-align:center;color:#f00;}

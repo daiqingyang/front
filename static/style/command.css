@@ -1,0 +1,47 @@
+@charset "utf-8";
+.commandBox{
+	background:#fff;
+	border:1px solid #D4D4D4;
+	margin-bottom: 10px;
+}
+.formItem{
+	position:relative;
+	padding:10px 0;
+	border-bottom:1px solid #D4D4D4;
+}
+.formItem label{
+	position:absolute;
+	left:0;
+	top:20px;
+	text-align:right;
+	font-size:16px;
+	width:180px;
+}
+.formItem .inp{
+	margin-left:200px;
+	width:564px;
+	box-sizing:border-box;
+}
+.formItem .inp input,.formItem .inp textarea{
+	width:100%;
+	background:#fafafa;
+	margin-left:0;
+}
+.formItem .inp input{
+	height:35px;
+	line-height:35px;
+}
+.formItem .inp textarea{
+	height:120px;
+}
+.formItem .submit{
+	display:inline-block;
+	color:#fff;
+	text-align:center;
+	line-height:28px;
+	border-radius:4px;
+	margin-left:720px;
+	width:45px;
+	height:28px;
+	background:#2e86cb;
+}
